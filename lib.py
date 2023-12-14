@@ -36,7 +36,6 @@ def generate_ntlmv2_response(
     password_hash = hashlib.new("md4", password.encode("utf-16le")).digest()
 
     client_challenge = random_byte_sequence(8)
-    print(f"cl c {client_challenge}")
 
     identity = concat_identity(username, domain)
 
